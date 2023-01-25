@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>MaximSelivanovCV</title>
+</head>
+<body>
+    <header class="header">
+        <div class="hole"></div>
+        <div class="header__photo">
+            <img class="myphoto" src="./img/myphoto.JPG" alt="myphoto">
+        </div>
+        <div class="header__info">
+            <p class="name">Maxim Selivanov</p>
+            <p class="city">Minsk, The Republic of Belarus</p>
+            <p class="contacts">
+                <a href="tel:+375293240549">tel: +375-29-324-05-49</a>
+                <br>
+                <a href="mailto:maxim.selivanov.dev@gmail.com">email: maxim.selivanov.dev@gmail.com</a>
+            </p>
+        </div>
+    </header>
+    <main class="main">
+        <article class="main__aboutme">
+            <h2 class="article-title">About me</h2>
+            <p class="main__aboutme-text">
+                Hi! My name is Maxim and I'm professional retocher and photographer.
+                <br>
+                On this page you can find examples of my retouching and contacts 
+                in order to hire me.
+            </p>
+        </article>
+        <div class="main__retouch">
+            <h2 class="article-title">My photography</h2>
+            <div class="slider" id="slider">
+                <img class="slider-img" src="./img/retouch/retouch_02.jpg" alt="001">
+                <img class="slider-img" src="./img/retouch/retouch_03.jpg" alt="002">
+                <img class="slider-img" src="./img/retouch/retouch_05.jpg" alt="003">
+                <img class="slider-img" src="./img/retouch/retouch_07.jpg" alt="004">
+                <img class="slider-img" src="./img/retouch/retouch_08.jpg" alt="005">
+            </div>
+            <div class="slider-controls">
+                <button id="btnPrev">Prev</button>
+                <button id="btnNext">Next</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__social">
+            <a class="footer__social-link" href="https://www.instagram.com/x100s_maksee/" target="_blank">
+                <img class="link-img" src="./img/free-icon-instagram-1384031_resize.png" alt="instagram">
+            </a>
+            <a class="footer__social-link" href="https://www.facebook.com/profile.php?id=100000723172263" target="_blank">
+                <img class="link-img" src="./img/free-icon-facebook-2175193_resize.png" alt="facebook">
+            </a>
+        </div>
+        <p class="year">Maxim Selivanov &copy 2023</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

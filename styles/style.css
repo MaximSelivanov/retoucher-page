@@ -1,0 +1,248 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    min-width: 400px;
+    line-height: 1.2;
+    background: rgb(2,0,36);
+    background: linear-gradient(130deg, rgba(2,0,36, 0.5) 0%, rgba(121,9,92,0.5) 24%, rgba(65,223,255,0.5) 76%);
+}
+
+.header,
+.main,
+.footer {
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px 5px rgb(0, 0, 0, 0.3);
+    margin: 30px auto;
+}
+
+.header {
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.hole,
+.header__photo {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    margin: auto;
+}
+
+.header__photo {
+    width: 360px;
+    height: 360px;
+}
+
+.header__info {
+    grid-column: 2 / 2;
+    grid-row: 1;
+    margin: auto;
+    font-weight:600;
+    line-height: 150%;
+    text-align: right;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.myphoto {
+    position: relative;
+    border-radius: 100%;
+    margin: 30px;   
+    box-shadow: 5px 8px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+a:hover {
+    color: rgba(121,9,92,0.5);
+}
+
+.hole {
+    position: relative;
+    border-radius: 100%;
+    width: 340px;
+    height: 340px;
+    overflow: hidden;
+    background-color: rgba(121,9,92,0.5);
+}
+
+.hole:after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    width: 340px;
+    height: 340px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 5px 8px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.main__aboutme {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-areas: 
+    "article hobby";
+    margin: 20px;
+}
+
+.main__retouch {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-areas: 
+    "article photo"
+    "article buttons";
+    margin: 20px;
+}
+
+.article-title {
+    grid-area: article;
+    text-align: right;
+    margin: auto 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.main__aboutme-text {
+    grid-area: hobby;
+    text-align: justify;
+}
+
+.slider  {
+    grid-area: photo;
+}
+
+.slider-controls {
+    grid-area: buttons;
+    margin: 0 auto;
+}
+.main__mymusic-music {
+    grid-area: music;
+    margin: 0 auto;
+}
+ 
+.slider {
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer__social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.footer__social-link{
+    margin: auto;
+}
+
+.year {
+    text-align: center;
+}
+
+.slider-img {
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .article-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        display: grid;
+        grid-template-areas: 
+        "photo"
+        "info";    
+    }
+    
+    .hole,
+    .header__photo {
+        grid-area: photo;  
+    }
+    
+    .header__info {
+        grid-area: info;
+        font-weight:600;
+        line-height: 150%;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 40px;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .main__education {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "education";
+    }
+    
+    .main__skills {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "skills";
+        margin: 20px;
+    }
+    
+    .main__info {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "info";
+        margin: 20px;
+    }
+    
+    .main__hobby {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "hobby";
+        margin: 20px;
+    }
+    
+    .main__myphotography {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "photo"
+        "buttons";
+        margin: 20px;
+    }
+    
+    .main__mymusic{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "article"
+        "music";
+        margin: 20px;
+    
+    }
+
+    .article-title {
+        grid-area: article;
+        margin: auto;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
